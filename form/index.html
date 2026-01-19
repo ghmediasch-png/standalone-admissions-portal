@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redirect | GH Schools Admission</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            overflow: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .slideshow {
+            width: 100%;
+            height: 70vh;
+            position: relative;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .countdown-container {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+        
+        .countdown {
+            font-weight: bold;
+            color: #e74c3c;
+            font-size: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .slideshow {
+                height: 50vh;
+            }
+            
+            .countdown-container {
+                font-size: 1rem;
+            }
+            
+            .countdown {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slideshow">
+            <div class="slide active">
+                <img src="../images/GH Schools.png" alt="GH Schools logo">
+            </div>
+            <div class="slide">
+                <img src="../images/GH Technology School Logo.png" alt="GH Technology School Logo">
+            </div>
+            <div class="slide">
+                <img src="../images/GH Catering School Logo.png" alt="GH Catering School Logo">
+            </div>
+            <div class="slide">
+                <img src="../images/GH Cosmetology School Logo.png" alt="GH Cosmetology School Logo">
+            </div>
+            <div class="slide">
+                <img src="../images/GH Fashion School Logo.png" alt="GH Fashion School Logo">
+            </div>
+        </div>
+        
+        <div class="countdown-container">
+            <p>This page will redirect to GH Schools Admission homepage in <span class="countdown">10</span> seconds</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const countdownElement = document.querySelector('.countdown');
+            let currentSlide = 0;
+            let countdown = 10;
+            let countdownInterval;
+            
+            // Function to show next slide
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            
+            // Function to update countdown
+            function updateCountdown() {
+                countdown--;
+                countdownElement.textContent = countdown;
+                
+                if (countdown <= 0) {
+                    // Stop the countdown when it reaches zero
+                    clearInterval(countdownInterval);
+                    countdownElement.textContent = "0";
+                    
+                    // Redirect after countdown reaches zero
+                    setTimeout(function() {
+                        window.location.href = "https://admissions.ghschools.online/";
+                    }, 500); // Small delay to ensure user sees the zero
+                }
+            }
+            
+            // Set interval for slideshow - 2 seconds per image
+            setInterval(nextSlide, 2000);
+            
+            // Set interval for countdown - 1 second
+            countdownInterval = setInterval(updateCountdown, 1000);
+        });
+    </script>
+</body>
+</html>

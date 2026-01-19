@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VZTBV2YJBX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VZTBV2YJBX');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GH Fashion School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/school-page-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body data-page="schools" data-school="gh-fashion-school">
+
+    <!-- Header will be loaded here by JavaScript -->
+    <header id="header-placeholder"></header>
+
+    <main>
+        <!-- Section 1: About GH Fashion School -->
+        <section class="section school-about-section">
+            <div class="school-about-content">
+                <h2>About GH Fashion School</h2>
+                <p>
+                    GH Fashion School, is a fashion oriented training institution established under the GH Schools brand
+                    which is approved by the Ghana Education Service-Technical Exams Unit and under the Commission for
+                    Technical and Vocational education and Training (CTVET). It is the third school established in 2019
+                    with the objective to train learners in areas like textiles, garment construction, and accessories.
+                </p>
+                <p>
+                    Over the years the school has emerged as a brand choice both for prospective students and the
+                    fashion industry. Courses offered: Fashion Design and Illustration, Textiles Technology, Garment
+                    Construction Technology, Pattern drafting Fashion Business and Entrepreneurship. The course
+                    structure has been designed in a manner that projects a focus area for every semester and they range
+                    from children's wear, men and ladies wear, traditional wear , wedding gowns and suits. GH Fashion
+                    School has qualified lecturers and made available modern industrial sewing machines and other tools,
+                    materials.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Courses -->
+        <section class="section courses-section">
+            <div class="courses-grid">
+                <div class="course-category">
+                    <h3>Elective Courses</h3>
+                    <ul>
+                        <li>Pattern Drafting</li>
+                        <li>Garment Construction</li>
+                        <li>Clothing and Textiles</li>
+                        <li>Millinery and Accessories</li>
+                        <li>Fashion Design</li>
+                    </ul>
+                </div>
+                <div class="course-category">
+                    <h3>Core Courses</h3>
+                    <ul>
+                        <li>Communication Skills</li>
+                        <li>African Studies</li>
+                        <li>ICT</li>
+                        <li>Entrepreneurship</li>
+                        <li>Production Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Entry Requirements -->
+        <section class="section requirements-section">
+            <h2 class="section-title">Entry Requirements</h2>
+            <div class="requirements-container">
+                <div class="requirements-card">
+                    <h3>Skills Acquisition Pathway</h3>
+                    <ul>
+                        <li>Any grade from JHS, SSSCE / WASSCE</li>
+                        <li>Must have at least one year of relevant working experience</li>
+                        <li>No results or No qualifications are required</li>
+                    </ul>
+                </div>
+                <div class="requirements-card">
+                    <h3>Academic Progression Pathway</h3>
+                    <div class="requirement-subsection">
+                        <h4>A. CTVET DIPLOMA</h4>
+                        <ul>
+                            <li>Five (5) SSCE/WASSCE including passes in English and Maths/GBCE Passes</li>
+                            <li>Five (5) old Certificate II Passes including English Language and Mathematics</li>
+                            <li>Five (5) New Certificate II passes including English Language and Mathematics</li>
+                            <li>One Year Certificate Programme in a relevant area from any accredited institution</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-subsection">
+                        <h4>B. CTVET CERTIFICATE</h4>
+                        <ul>
+                            <li>Four (4) SSCE/WASSCE passes including English Language and Mathematics/GBCE passes</li>
+                            <li>Four (4) Old Certificate II passes including English Language and Mathematics</li>
+                            <li>Four (4) New Certificate passes including English Language and Mathematics</li>
+                        </ul>
+                        <p class="requirement-or">OR</p>
+                        <ul>
+                            <li>Must be at least 25 years old and must show proof of date of birth with national
+                                document</li>
+                            <li>Must have at least two (2) years relevant working experience</li>
+                        </ul>
+                    </div>
+                    <div class="requirement-note">
+                        <p><strong>Note:</strong> Students who complete our 2 years CTVET diploma can gain admissions
+                            into the second year in a technical university in Ghana</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Duration and Certificate Awarded -->
+        <section class="section">
+            <h2 class="section-title">Duration and Certificate Awarded</h2>
+            <div class="duration-list">
+                <ul>
+                    <li>CERTIFICATE OF IN FASHION DESIGN & TECHNOLOGY - 1 YEAR</li>
+                    <li>ADVANCE CERTIFICATE IN FASHION DESIGN AND TECHNOLOGY - 2 YEARS</li>
+                    <li>CTVET DIPLOMA - (2 YEARS)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 5: Session -->
+        <section class="section">
+            <h2 class="section-title">Session</h2>
+            <div class="duration-list">
+                <ul>
+                    <li>MORNING 8-12</li>
+                    <li>AFTERNOON 12-4</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 6: Fees -->
+        <section class="section fees-section">
+            <h2 class="section-title">GH FASHION SCHOOL ITEMS AND FEES</h2>
+            <div class="fees-table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Items</th>
+                            <th class="text-right">Amount (GHS)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fees-table-body">
+                        <!-- Fees will be loaded dynamically from Supabase -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="section">
+                <h2>Start Your Journey With Us</h2>
+                <p>Take the first step towards an exceptional education that will prepare you for success in tomorrow's
+                    world. Join our community of learners, innovators, and future leaders.</p>
+                <a href="#" class="btn btn-cta">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be loaded here by JavaScript -->
+    <footer id="footer-placeholder"></footer>
+
+    <!-- MODAL SECTION -->
+    <div id="modal-placeholder"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/component-script.js"></script>
+    <script src="fees-loader.js"></script>
+</body>
+
+</html>

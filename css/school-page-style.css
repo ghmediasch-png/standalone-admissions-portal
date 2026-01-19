@@ -1,0 +1,155 @@
+/*
+==================================
+School Page Specific Styles
+==================================
+*/
+
+/* Section 1: About the School */
+.school-about-section {
+    padding-top: 120px; /* Push content below the fixed header */
+    background-color: #f8f9fa;
+}
+
+.school-about-content h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.school-about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+    text-align: justify;
+}
+
+/* Section 2: Courses */
+.courses-section {
+    background-color: #ffffff;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.course-category {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.course-category h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.course-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-category li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.course-category li:last-child {
+    border-bottom: none;
+}
+
+/* Section 3 & 4: Reusing styles from admission-style.css */
+/* If you want to keep them separate, copy the rules here. */
+/* For now, we assume admission-style.css can be used or styles copied */
+.requirements-section {
+    background-color: #f8f9fa;
+}
+.duration-list {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.duration-list ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+.duration-list li {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+/* Section 5: Fees Table */
+.fees-section {
+    background-color: #ffffff;
+}
+
+.fees-table-container {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow-x: auto; /* For responsiveness on small screens */
+}
+
+.fees-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fees-table-container th,
+.fees-table-container td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.fees-table-container th {
+    background-color: #2c3e50;
+    color: white;
+    text-align: left;
+}
+
+.fees-table-container tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.fees-table-container tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Total Rows Styling */
+.total-row {
+    background-color: #2c3e50 !important;
+    color: white !important;
+    font-weight: bold;
+    border-top: 3px solid #3498db;
+}
+
+.total-row td {
+    padding: 1rem 1.5rem !important;
+    border-bottom: none !important;
+}
+
+.total-row:hover {
+    background-color: #34495e !important;
+}
+
+/* Make sure zebra striping doesn't affect total rows */
+.fees-table-container tfoot .total-row {
+    background-color: #2c3e50 !important;
+}
